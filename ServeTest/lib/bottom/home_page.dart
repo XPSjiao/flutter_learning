@@ -1,5 +1,6 @@
+//首页tab页面
 import 'package:flutter/material.dart';
-import 'package:servetest/widget/hot_widget.dart';
+import 'package:servetest/widget/custom/hot_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -65,7 +66,7 @@ class Body extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const <Widget>[
         SizedBox(
-          width: 190,
+          width: 200,
           height: 150,
           child: Card(
             color: Color(0xffe05b48),
@@ -83,7 +84,7 @@ class Body extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: 190,
+          width: 200,
           height: 150,
           child: Card(
             color: Color(0xFF5f6cd1),

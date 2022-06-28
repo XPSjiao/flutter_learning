@@ -1,5 +1,6 @@
+//样例tab页面
 import 'package:flutter/material.dart';
-import 'package:servetest/widget/hot_widget.dart';
+import 'package:servetest/widget/custom/hot_widget.dart';
 
 class SamplePage extends StatefulWidget {
   const SamplePage({Key? key}) : super(key: key);
@@ -15,14 +16,14 @@ class _SamplePageState extends State<SamplePage> {
     final size = MediaQuery.of(context).size;
     final width = size.width;
     final height = size.height;
-    // 用Container包裹Scaffold,设置背景图充满
+    // 用Container包裹Scaffold，设置背景图充满
     return Container(
       width: width,
       height: height,
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              'https://syhan.oss-cn-hangzhou.aliyuncs.com/img/bg.png'),
+              'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/banner/bg.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -53,16 +54,16 @@ class _SamplePageState extends State<SamplePage> {
       Info(
         width: 400.0,
         height: 100.0,
-        color: Colors.pink,
-        title: '数据展示展示样例',
-        url: '/data-view',
+        color: Colors.orange,
+        title: '时间轴展示样例',
+        url: '/timeline',
       ),
       Info(
         width: 400.0,
         height: 100.0,
-        color: Colors.orange,
-        title: '时间轴事件展示样例',
-        url: '/timeline',
+        color: Colors.pink,
+        title: '数据展示面板样例',
+        url: '/data-view',
       ),
       Info(
         width: 400.0,
@@ -84,7 +85,7 @@ class _SamplePageState extends State<SamplePage> {
         color: Colors.purple,
         title: '健身运动样例',
         url: '/sport',
-      ),
+      )
     ];
     return Container(
       width: size.width,
@@ -104,6 +105,11 @@ class _SamplePageState extends State<SamplePage> {
               .toList(),
         ),
       ),
+      // child: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //
+      // ),
     );
   }
 }
