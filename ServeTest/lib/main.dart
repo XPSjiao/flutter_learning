@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:servetest/bottom/index.dart';
-import 'package:servetest/sample/plant_shop.dart';
-import 'package:servetest/sample/timeline_page.dart';
-import 'package:servetest/widget/stateful/image_widget.dart';
-import 'package:servetest/widget/stateful/silverappbar_widget.dart';
-import 'package:servetest/widget/stateless/container_widget.dart';
-import 'package:servetest/widget/stateless/gridview_widget.dart';
-import 'package:servetest/widget/stateless/listview_widget.dart';
-import 'package:servetest/widget/stateless/text_widget.dart';
+import 'package:servetest/common/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,28 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前
     // MaterialApp组件会覆盖掉这个值。
-    // SystemUiOverlayStyle systemUiOverlayStyle = const SystemUiOverlayStyle(
-    //   statusBarColor: Colors.transparent,
-    //   statusBarBrightness: Brightness.light,
-    // );
-    // SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      routes: {
-        '/index': (context) => const Index(),
-        // 无状态组件导航
-        '/container': (context) => const ContainerWidget(),
-        '/text': (context) => const TextWidget(),
-        '/listview': (context) => const ListViewWidget(),
-        '/gridview': (context) => const GridViewWidget(),
-        // 有状态组件导航
-        '/image': (context) => const ImageWidget(),
-        '/silverappbar': (context) => const SilverAppBarWidget(),
-        // 示例导航
-        '/plant-shop': (context) => const PlantShop(),
-        '/timeline': (context) => const TimelinePage(),
-      },
+      routes: routes,
       initialRoute: '/',
       theme: ThemeData(
         primarySwatch: Colors.indigo,

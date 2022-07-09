@@ -1,5 +1,5 @@
-//无状态组件Container
 import 'package:flutter/material.dart';
+import 'package:servetest/common/style.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({Key? key}) : super(key: key);
@@ -19,21 +19,17 @@ class ContainerWidget extends StatelessWidget {
           children: [
             const Text(
               '容器组件',
-              style: TextStyle(
-                fontSize: 22,
-                color: Colors.purpleAccent,
-              ),
+              style: titleStyle,
             ),
             Container(
               margin: const EdgeInsets.symmetric(
                 vertical: 5.0,
               ),
               child: const Text(
-                  '用于容纳单个子组件的容器组件。集成了若干个单子组件的功能，'
-                  '如内外边距、形变、装饰、约束等。',
-                  style: TextStyle(
-                    fontSize: 18,
-                  )),
+                '用于容纳单个子组件的容器组件。集成了若干个单子组件的功能，'
+                '如内外边距、形变、装饰、约束等。',
+                style: descStyle,
+              ),
             ),
             Container(
               margin: const EdgeInsets.all(20.0),
@@ -48,7 +44,7 @@ class ContainerWidget extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(20.0)),
                 image: const DecorationImage(
                   image: NetworkImage(
-                      'https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/web%E8%83%8C%E6%99%AF/bg-15.jpg'),
+                      'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/img/img.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),

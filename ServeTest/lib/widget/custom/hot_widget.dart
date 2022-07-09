@@ -1,7 +1,6 @@
-//首页推荐植物组件
 import 'package:flutter/material.dart';
 
-//封装首页常用组件卡片
+//封装常用组件卡片
 class HotWidget extends StatelessWidget {
   final Info info;
 

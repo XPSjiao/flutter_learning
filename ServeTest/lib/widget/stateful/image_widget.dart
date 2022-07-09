@@ -1,12 +1,12 @@
-//图片组件
 import 'package:flutter/material.dart';
+import 'package:servetest/common/style.dart';
 
 class ImageWidget extends StatelessWidget {
   const ImageWidget({Key? key}) : super(key: key);
-  final assetsImagePath = 'images/junzilan.png';
+  final assetsImagePath = 'images/Android_Studio.png';
   final assetsGifPath = 'images/my-gif.gif';
   final netImageUrl =
-      'https://soft2176-use.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/head-u-1.jpg';
+      'https://niit-soft.oss-cn-hangzhou.aliyuncs.com/avatar/hand-2.jpg';
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +33,7 @@ class ImageWidget extends StatelessWidget {
             children: <Widget>[
               const Text(
                 '图片组件',
-                style: TextStyle(
-                  fontSize: 22,
-                  color: Colors.purpleAccent,
-                ),
+                style: titleStyle,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
@@ -44,9 +41,7 @@ class ImageWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '用于显示一张图片，可以从文件、内存、网络、资源里加载。可以指定适应方式、样式、颜色混合模式、重复模式。',
-                  style: TextStyle(
-                    fontSize: 18,
-                  ),
+                  style: descStyle,
                 ),
               ),
               Container(
@@ -55,11 +50,7 @@ class ImageWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '从资源文件和网络加载图片',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
                 ),
               ),
               Wrap(
@@ -75,11 +66,7 @@ class ImageWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '图片颜色及混合模式',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
                 ),
               ),
               Wrap(
@@ -111,11 +98,7 @@ class ImageWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '图片对齐模式',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
                 ),
               ),
               Container(
@@ -124,24 +107,16 @@ class ImageWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '图片实现局部放大',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
                 ),
               ),
               Container(
                 margin: const EdgeInsets.symmetric(
                   vertical: 10.0,
                 ),
-                child: const Text(
+                child: Text(
                   '图片重复模式',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
                 ),
               ),
               Container(
@@ -150,11 +125,7 @@ class ImageWidget extends StatelessWidget {
                 ),
                 child: const Text(
                   '图片的适应模式',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black87,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: subTitleStyle,
                 ),
               ),
             ],
